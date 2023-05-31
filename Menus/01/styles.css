@@ -21,7 +21,7 @@ button {
 section {
   width: 100vw;
   height: 100vh;
-  background-image: url("./hero-image.webp");
+  background-image: url("./assets/hero-image.webp");
   background-size: cover;
   overflow: hidden;
 }
