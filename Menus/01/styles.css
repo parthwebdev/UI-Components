@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Ubuntu;
+  display: grid;
+  place-items: center;
+}
+
+button {
+  border: 0;
+  outline: none;
+  background: none;
+}
+
+section {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./hero-image.webp");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url("./assets/menu.svg");
+  background-size: cover;
+  cursor: pointer;
+  z-index: 3;
+}
+body.open .menu-btn {
+  background-image: url("./assets/close.svg");
+}
+.menu {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  z-index: 2;
+}
+
+.menu nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  visibility: hidden;
+}
+body.open .menu nav {
+  visibility: visible;
+}
+
+.menu nav a {
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  opacity: 1;
+  transition: 0.25s;
+}
+body.open .menu a {
+  animation: show 0.3s backwards;
+}
+.menu nav:hover a:not(:hover) {
+  opacity: 0.5;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    translate: 0 -30px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: 100vh;
+  aspect-ratio: 1 / 1;
+  translate: -50% -50%;
+  scale: 0;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  z-index: 1;
+  transition: all 0.6s;
+}
+body.open .backdrop {
+  opacity: 1;
+  scale: 5;
+}
