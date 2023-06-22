@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Pathway+Extreme:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pathway Extreme", sans-serif;
+  background-color: #161616;
+  color: #9c9c9c;
+  min-height: 100vh;
+  margin: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#modal {
+  max-width: 600px;
+  padding: 1.5rem;
+  border: 0;
+}
+
+#modal .modal-btn {
+  padding: 10px 18px;
+  margin-top: 10px;
+}
+#modal .modal-btn:first-child {
+  /* Subscribe Button */
+  background-color: #00ce79;
+}
+#modal .modal-btn:last-child {
+  /* Close Button */
+  border: 1px solid black;
+  background-color: #fff;
+  margin-left: 16px;
+}
+#modal .modal-btn:last-child:hover {
+  color: white;
+  background-color: #000;
+}
+
+#modal::backdrop {
+  background: rgb(0 0 0 / 0.5);
+}
+
+#modal h2 {
+  margin-bottom: 20px;
+}
+#modal p {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.content {
+  max-width: 900px;
+}
+
+.content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 32px;
+}
+.content h1 span {
+  color: #00ce79;
+}
+
+.content p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.content .btn {
+  font-weight: 600;
+  font-size: 16px;
+  padding: 16px 32px;
+  background-color: #00ce79;
+  margin-top: 20px;
+}
