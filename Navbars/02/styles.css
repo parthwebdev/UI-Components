@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lato, sans-serif;
+  background-color: #080a0d;
+  color: #d4dbe4;
+}
+
+#header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20px;
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  font-size: 40px;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  letter-spacing: 5px;
+}
+
+.tabs-container {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background-color: #121922;
+  box-shadow: 0 0 20px rgba(111, 111, 111, 0.2);
+}
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+.tabs-container a {
+  text-decoration: none;
+  color: #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+.tabs-container a:hover {
+  background-color: #4c79bd;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
