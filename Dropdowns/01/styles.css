@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, Arial, sans-serif;
+  background-color: hsl(225, 6%, 9%);
+  color: #d4dbe4;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  background: none;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #202124;
+  padding: 0 40px;
+  height: 4.8rem;
+}
+
+nav > .logo {
+  font-size: 26px;
+  font-weight: 600;
+  color: #528fe0;
+}
+
+.dropdowns {
+  display: flex;
+  align-self: stretch;
+}
+.dropdown {
+  position: relative;
+  padding: 26px;
+}
+
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 8px;
+}
+.dropdown:hover {
+  background-color: hsl(225, 30%, 12%);
+  cursor: pointer;
+}
+.dropdown-button span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.dropdown-button i {
+  font-size: 14px;
+}
+
+.dropdown:hover > .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  min-width: 100%;
+  background-color: #202124;
+  display: none;
+}
+
+.dropdown-menu button {
+  padding: 12px 24px;
+}
+
+.dropdown-menu button:hover {
+  background-color: hsl(225, 6%, 20%);
+}
