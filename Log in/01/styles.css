@@ -33,7 +33,6 @@ a {
 .container {
   max-width: 600px;
   width: 100%;
-  min-height: 85vh;
   background-color: #000;
   padding: 24px 20px;
   border-radius: 16px;
