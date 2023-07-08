@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in - Part 01</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <button class="close-button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <a class="logo" href="#">
+          <i class="fa-brands fa-twitter"></i>
+        </a>
+      </div>
+
+      <div class="content">
+        <h1>Log in to Twitter</h1>
+
+        <div class="action-buttons">
+          <button class="primary-button sign-in-button">
+            <object data="./google.svg"></object>
+            <span>Sign in with Google</span>
+          </button>
+          <button class="primary-button sign-in-button">
+            <object data="./apple.svg"></object>
+            <span>Sign in with Apple</span>
+          </button>
+        </div>
+
+        <div class="divider">
+          <p>or</p>
+        </div>
+
+        <div class="email-log-in">
+          <input type="text" id="log-in" placeholder="Email">
+          <label for="log-in">Phone, email or username</label>
+        </div>
+
+        <div class="action-buttons">
+          <button class="primary-button">Next</button>
+          <button class="secondary-button">Forgot Password?</button>
+        </div>
+      </div>
+      <div class="sign-up">
+        <p>Don't have an account? <a href="#">Sign up</a></p>
+      </div>
+    </div>
+  </body>
+</html>
