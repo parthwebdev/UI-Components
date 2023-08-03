@@ -33,7 +33,6 @@ gsap.to(menuBtn, {
     trigger: document.documentElement,
     start: 0,
     end: window.innerHeight,
-    markers: true,
     onLeave: () => {
       gsap.to(menuBtn, { scale: 1 });
     },
