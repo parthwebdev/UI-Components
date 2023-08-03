@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter;
+  color: black;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  border: 0;
+  outline: none;
+  background: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  height: 100vh;
+  background-color: #101010;
+  display: flex;
+  flex-direction: column;
+}
+
+.landing {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+section h1 {
+  color: #d7d7d7;
+  font-size: 64px;
+  font-weight: 700;
+}
+section p {
+  font-size: 18px;
+  color: #949494;
+}
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.section h1 {
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px;
+  color: white;
+}
+.navbar .nav-logo {
+  font-size: 22px;
+}
+.nav-items {
+  display: flex;
+  gap: 40px;
+}
+.nav-item:hover {
+  color: #949494;
+}
+
+.menu-btn {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+
+  width: 68px;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191b1d;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  scale: 0;
+  transition: background-color 0.3s ease;
+  z-index: 3;
+}
+.menu-btn i {
+  font-size: 24px;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #1c1d20;
+  color: white;
+  padding: 20vh 11vw 8vh 11vw;
+  display: flex;
+  flex-direction: column;
+  font-size: 48px;
+  transform: translateX(100%);
+  z-index: 2;
+}
+.menu-header {
+  font-size: 12px;
+  color: #7f7f81;
+  padding: 16px 0;
+  border-bottom: 1px solid #7f7f81;
+  margin-bottom: 56px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.menu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.menu-item {
+  transition: transform 0.3s ease;
+}
+.menu-item:hover {
+  transform: translateY(-10px);
+}
+
+.menu.active + .menu-btn {
+  background-color: #455ce9;
+}
