@@ -76,7 +76,6 @@ nav > .sidebar-links {
 
 body.active .sidebar-links,
 body.active .sidebar-header,
-/* body.active .sidebar-bottom, */
 body.active .user-profile {
   justify-content: start;
   align-items: stretch;
@@ -108,9 +107,6 @@ body.active .hidden {
   height: 24px;
 }
 
-/* .sidebar-bottom {
-  width: 100%;
-} */
 .sidebar-bottom .sidebar-links {
   padding-bottom: 1.5rem;
 }
