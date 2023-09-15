@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(to bottom right, #fbda74, #f69e83);
+  overflow: hidden;
+}
+
+.tiles {
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+
+  position: relative;
+  z-index: 2;
+}
+
+.tile {
+  position: relative;
+  cursor: pointer;
+}
+.tile::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background-color: #0f0f0f;
+}
+
+.tile:hover::before {
+  opacity: 0.8;
+}
+
+.title {
+  font-family: "Clash Display";
+  font-size: 6.5vw;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.title span {
+  color: #ad1deb;
+}
