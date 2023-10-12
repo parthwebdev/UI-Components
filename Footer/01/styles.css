@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gothic A1", sans-serif;
+  height: 100vh;
+  color: #0e100f;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+footer {
+  width: 100%;
+  background-color: #fffce1;
+}
+
+input,
+a,
+button,
+li {
+  all: unset;
+  font: inherit;
+}
+a,
+button {
+  cursor: pointer;
+}
+
+footer {
+  padding: 3.5rem clamp(3rem, 6vw, 14rem);
+}
+.footer-wrapper {
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footer-subscribe {
+  max-width: clamp(20rem, 33vw, 33rem);
+}
+.footer-subscribe > h2 {
+  font-size: clamp(1.5rem, 2.3vw, 2.25rem);
+}
+.input-box {
+  display: flex;
+  max-width: 100%;
+  padding-block: 1rem;
+  border-bottom: 1px solid black;
+  margin-top: 3rem;
+}
+.input-box > input {
+  flex-grow: 1;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(3rem, 4vw, 7rem);
+}
+.footer-nav > div > h3 {
+  font-size: 1rem;
+}
+.footer-nav > div > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.footer-nav > div li {
+  font-size: 1.125rem;
+  font-weight: 700;
+  transition: opacity 200ms ease;
+}
+.footer-nav > div li:hover {
+  opacity: 0.5;
+}
+
+.footer-copyright {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 0.875rem;
+  margin-top: 5rem;
+}
+
+@media (width <= 53rem) {
+  .footer-subscribe {
+    max-width: 100%;
+  }
+}
