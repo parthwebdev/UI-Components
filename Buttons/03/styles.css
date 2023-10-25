@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", system-ui;
+  height: 100vh;
+  background-color: hsl(240, 4%, 7%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: system-ui;
+}
+
+:root {
+  --primary: 250 66% 61%;
+}
+
+.btn {
+  all: unset;
+  font-size: 24px;
+  padding: 14px 52px;
+  background: hsl(0, 0%, 0%);
+  color: white;
+  text-transform: uppercase;
+  position: relative;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+.btn > span {
+  font-family: "Roboto";
+  letter-spacing: 1px;
+  position: relative;
+  z-index: 10;
+  transition: 0.25s ease;
+}
+.btn:hover > span {
+  color: hsl(var(--primary) / 1);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background-color: inherit;
+  border-radius: inherit;
+  background-image: conic-gradient(
+    from var(--angle) at 50% 50%,
+    transparent 0%,
+    transparent 33%,
+    hsl(var(--primary)) 50%,
+    transparent 66%,
+    transparent 100%
+  );
+  animation: rotate 2s infinite linear;
+  z-index: -1;
+}
+
+.btn::before {
+  filter: blur(15px);
+}
+
+.inner {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    100px circle at var(--mouseX) var(--mouseY),
+    hsl(var(--primary) / 0.3),
+    transparent 50%
+  );
+  border-radius: inherit;
+  z-index: 0;
+  opacity: 0;
+}
+.btn:hover .inner {
+  opacity: 1;
+}
+
+@keyframes rotate {
+  0% {
+    --angle: 0deg;
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
