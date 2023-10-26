@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: 216 81% 49%;
+  --background: 216 60% 97%;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  height: 100vh;
+  background-color: hsl(var(--background));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.tabs {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  display: flex;
+  background-color: #fff;
+  border-radius: 1000px;
+  box-shadow: 0 0 1px 0 rgba(24, 94, 224, 0.15),
+    0 6px 12px 0 rgba(24, 94, 224, 0.15);
+  list-style: none;
+  position: relative;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.tab {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: inherit;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.tabs .slider {
+  width: 150px;
+  height: 50px;
+  position: absolute;
+  border-radius: inherit;
+  background-color: hsl(var(--primary) / 0.1);
+  z-index: 0;
+  transition: 0.25s ease;
+}
+
+input[type="radio"]:checked + label {
+  color: hsl(var(--primary));
+}
+
+input[id="html"]:checked ~ .slider {
+  transform: translateX(0);
+}
+input[id="css"]:checked ~ .slider {
+  transform: translateX(100%);
+}
+input[id="javascript"]:checked ~ .slider {
+  transform: translateX(200%);
+}
+input[id="react"]:checked ~ .slider {
+  transform: translateX(300%);
+}
