@@ -86,14 +86,12 @@ a {
 }
 
 .card-content {
-  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 18px;
   align-items: center;
-  /* z-index: 2; */
 }
 
 .card-content > i {
