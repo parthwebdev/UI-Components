@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  height: 100vh;
+  background-color: #1f2029;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cursor {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 100;
+  transition: all 300ms linear;
+}
+.expand {
+  transform: scale(2) translate(-25%, -25%);
+  background-color: white;
+  border: none;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.link {
+  display: inline-block;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-text-stroke: 2px hsl(0 0% 100% / 0.4);
+  text-stroke: 2px hsl(0 0% 100% / 0.4);
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.link::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  -webkit-text-fill-color: white;
+  text-fill-color: white;
+  color: white;
+  transition: 300ms linear;
+  overflow: hidden;
+}
+
+.link:hover {
+  -webkit-text-stroke: 0;
+  text-stroke: 0;
+}
+
+.link:hover::before {
+  height: 100%;
+}
