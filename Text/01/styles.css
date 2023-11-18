@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #1e1e1e;
+  display: grid;
+  place-items: center;
+  font-family: "Kanit", sans-serif;
+}
+
+div {
+  position: relative;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 80px;
+  cursor: pointer;
+}
+
+:root {
+  --clr: #1af7ff;
+}
+
+.text {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.6);
+  transition: 0.1s ease;
+  transition-delay: 0.25s;
+}
+
+.hover-text {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  color: var(--clr);
+  overflow: hidden;
+  border-right: 6px solid var(--clr);
+  transition: 0.5s ease-in-out;
+}
+
+div:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 40px var(--clr));
+}
+div:hover .text {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0);
+}
