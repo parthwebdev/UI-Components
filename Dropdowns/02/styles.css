@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  background-color: #fcfcf7;
+  color: #1f1f09;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button,
+li,
+a {
+  all: unset;
+  box-sizing: border-box;
+}
+
+#dropdown {
+  --border-radius: 6px;
+  --shadow-color: 60deg 13% 61%;
+
+  max-width: 220px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  position: relative;
+  box-shadow: 0.8px 1.6px 2px -0.8px hsl(var(--shadow-color) / 0.3),
+    2.1px 4.1px 5.2px -1.7px hsl(var(--shadow-color) / 0.3),
+    5px 10px 12.6px -2.5px hsl(var(--shadow-color) / 0.3);
+}
+
+/* DROPDOWN/SUBMENU ITEMS AND TOGGLES */
+.dropdown-toggle,
+.menu-item,
+.submenu-item {
+  width: 100%;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+:is(.menu-item, .submenu-item):first-child {
+  border-top-right-radius: inherit;
+  border-top-left-radius: inherit;
+}
+:is(.menu-item, .submenu-item):last-child {
+  border-bottom-right-radius: inherit;
+  border-bottom-left-radius: inherit;
+}
+:is(.menu-item, .submenu-item):hover {
+  background-color: #faf6ea;
+}
+
+.dropdown-toggle,
+.submenu-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-toggle > span {
+  color: #7b7b6e;
+}
+i {
+  color: #db8400;
+  transition: 0.25s ease;
+}
+.dropdown-toggle.open > i {
+  rotate: 180deg;
+}
+
+/* MENU and SUBMENU */
+.dropdown {
+  position: relative;
+}
+
+.menu,
+.submenu {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+.menu {
+  width: 100%;
+  translate: 0 -12px;
+}
+.menu.open {
+  visibility: visible;
+  opacity: 1;
+  translate: 0 12px;
+}
+
+.submenu {
+  width: max-content;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  translate: -12px 0;
+}
+
+.menu-item:hover > .submenu-toggle + .submenu {
+  visibility: visible;
+  opacity: 1;
+  translate: 8px 0;
+}

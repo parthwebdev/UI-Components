@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdowns Part 02</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div id="dropdown">
+      <button class="dropdown-toggle">
+        <span>Menu</span>
+        <i class="fa-solid fa-caret-down"></i>
+      </button>
+
+      <ul class="menu">
+        <li class="menu-item"><a href="#">Italian</a></li>
+        <li class="menu-item"><a href="#">Chinese</a></li>
+        <li class="menu-item dropdown">
+          <a href="#" class="submenu-toggle">
+            <span>Healthy Options</span>
+            <i class="fa-solid fa-caret-right"></i>
+          </a>
+          <ul class="submenu">
+            <li class="submenu-item"><a href="#">Vegetarian</a></li>
+            <li class="submenu-item"><a href="#">Vegan</a></li>
+            <li class="submenu-item"><a href="#">Gluten-Free</a></li>
+          </ul>
+        </li>
+        <li class="menu-item"><a href="#">Mexican</a></li>
+        <li class="menu-item dropdown">
+          <a href="#" class="submenu-toggle">
+            <span>Specials</span>
+            <i class="fa-solid fa-caret-right"></i>
+          </a>
+          <ul class="submenu">
+            <li class="submenu-item"><a href="#">Deals of the Day</a></li>
+            <li class="submenu-item"><a href="#">Seasonal Offers</a></li>
+            <li class="submenu-item"><a href="#">Holiday Packages</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
