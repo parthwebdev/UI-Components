@@ -1,54 +1,73 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
+  font-family: "Roboto";
   background-color: #090909;
-  display: grid;
-  place-items: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container {
-  width: 80px;
-  height: 45px;
+button {
+  border: 0;
+  cursor: pointer;
   position: relative;
 }
+button div {
+  background-color: rgb(255, 70, 85);
+  padding: 1.2rem 5.5rem;
+  position: relative;
+  overflow: hidden;
+}
+button a {
+  position: relative;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ece8e1;
+  text-transform: uppercase;
+  z-index: 2;
+}
 
-.checkbox {
-  opacity: 0;
-  width: 0;
-  height: 0;
+button::before,
+button::after {
+  content: "";
   position: absolute;
+  width: 105%;
+  height: 50%;
+  background-color: transparent;
+  border: 1px solid rgb(134, 129, 124);
+  left: -2.5%;
+  z-index: -1;
 }
 
-.switch {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 1000px;
-  background-color: #e9e9eb;
-  transition: all 0.2s ease-out;
-  cursor: pointer;
+button::before {
+  border-bottom: 0;
+  top: -10%;
+}
+button::after {
+  border-top: 0;
+  bottom: -10%;
 }
 
-.slider {
+button span {
   position: absolute;
-  inset: 2.5px;
-  width: 40px;
-  height: 40px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15), 0px 3px 1px rgba(0, 0, 0, 0.06);
-  transition: all 0.2s ease-out;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: 110%;
+  background-color: rgb(15, 25, 35);
+  transform: translateX(-105%) skew(-10deg);
+  transition: 0.4s ease;
 }
 
-.checkbox:checked + .switch {
-  background-color: #34c759;
-}
-
-.checkbox:checked + .switch .slider {
-  left: calc(50% - 2.5px);
+button:hover span {
+  transform: translateX(-5%) skew(-10deg);
 }

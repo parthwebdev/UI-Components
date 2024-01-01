@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  background-color: hsl(203, 20%, 10%);
+  background-color: #222221;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,14 +24,14 @@ ul {
   text-decoration: none;
   width: 4.8rem;
   height: 4.8rem;
-  background-color: hsl(203, 92%, 97%);
+  background-color: #f0f9fe;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 1;
-  border: 3px solid hsl(203, 92%, 97%);
+  border: 3px solid #f0f9fe;
   overflow: hidden;
 }
 
