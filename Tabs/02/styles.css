@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --clr-primary: hsl(263, 81%, 45%);
+  --clr-text-dark: hsl(250, 15%, 8%);
+  --clr-text-light: hsl(240, 4%, 57%);
+  --clr-bg: hsl(225, 62%, 95%);
+  --clr-neutral: hsl(222, 23%, 91%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, system-ui;
+  height: 100vh;
+  color: var(--clr-text-light);
+  background-color: var(--clr-bg);
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+button,
+ul,
+li {
+  all: unset;
+}
+
+.tab-container {
+  width: 100%;
+  max-width: 700px;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--clr-white);
+  margin-top: 320px;
+}
+
+.tab-menu {
+  display: flex;
+  width: 100%;
+}
+
+.tab-menu > .tab {
+  flex: 1;
+  background-color: var(--clr-neutral);
+  font-size: 16px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.tab-menu > .tab:not(:last-child) {
+  border-right: 2px solid var(--clr-white);
+}
+.tab-menu > .tab.active {
+  background-color: var(--clr-white);
+}
+
+.tab > a {
+  width: 100%;
+  height: 100%;
+  padding: 28px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--clr-text-dark);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+.tab-menu > .tab.active > a {
+  color: var(--clr-primary);
+}
+
+.tab-panels {
+  padding: 48px;
+}
+
+.panel > h3 {
+  font-size: 28px;
+  color: var(--clr-text-dark);
+  margin-bottom: 20px;
+}
+
+.panel > p {
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 28px;
+}
+
+.panel > button {
+  padding: 10px 28px;
+  color: var(--clr-white);
+  background-color: var(--clr-text-dark);
+  border-radius: 6px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.panel > button:hover {
+  opacity: 0.9;
+}
