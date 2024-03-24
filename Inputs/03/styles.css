@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  height: 100vh;
+  background-color: hsl(262, 30%, 8%);
+  color: #fbfcfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  all: unset;
+}
+
+.input-wrapper {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  background: hsl(231, 14%, 10%);
+  border: 2px solid #2b2c37;
+  border-radius: 10px;
+
+  box-shadow: hsla(0, 0%, 0%, 0.1) 0px 20px 25px -5px,
+    #0000000a 0px 10px 10px -5px;
+  transition: all 0.35s ease-out;
+  position: relative;
+}
+
+.input {
+  width: calc(100% - 70px);
+  font: inherit;
+  font-size: 18px;
+  padding: 1rem;
+}
+.input::placeholder {
+  color: #727884;
+}
+
+.input-wrapper:has(input:focus) {
+  border: 2px solid #de55de;
+  box-shadow: 0 0 120px hsl(300 67% 60% / 0.5);
+}
+
+.input-wrapper > svg {
+  position: absolute;
+  right: 1rem;
+  width: 28px;
+  flex-shrink: 0;
+  transition: 0.25s;
+}
+
+svg > path {
+  fill: none;
+  stroke: #727884;
+}
+
+.input:focus + svg > path {
+  stroke: none;
+  fill: hsl(328, 73%, 72%);
+}
+.input:focus + svg {
+  scale: 1.2;
+}
