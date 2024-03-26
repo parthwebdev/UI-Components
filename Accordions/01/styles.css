@@ -26,8 +26,8 @@ img {
 
 .container {
   width: 100%;
-  width: 900px;
-  height: 400px;
+  width: 820px;
+  height: 340px;
   display: flex;
   gap: 10px;
   margin-inline: 50px;
@@ -44,12 +44,15 @@ img {
   flex-grow: 1;
   cursor: pointer;
   position: relative;
-  transition: 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition: flex-grow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 
-  --transition-timing: 0.25s;
+  --transition-timing: 0.35s;
 }
-.card.active {
+/* .card.active {
   flex-grow: 100;
+} */
+.card:hover {
+  flex-grow: 7;
 }
 
 .card > .background {
@@ -61,7 +64,7 @@ img {
   z-index: -1;
   transition: var(--transition-timing) ease;
 }
-.card.active > .background {
+.card:hover > .background {
   filter: brightness(1) grayscale(0);
 }
 
@@ -76,12 +79,12 @@ img {
   transition: var(--transition-timing);
   z-index: 10;
 }
-.card.active > .card-content {
+.card:hover > .card-content {
   inset: 20px;
   top: auto;
 }
 
-.card-content * {
+.card-content > * {
   transition: var(--transition-timing);
 }
 
@@ -96,13 +99,13 @@ img {
   border-radius: 50%;
   overflow: hidden;
 }
-.card.active .profile-image {
+.card:hover .profile-image {
   border: 1px solid rgb(110, 252, 205);
 }
 .profile-image > svg {
   stroke: #fefefe;
 }
-.card.active .profile-image > svg {
+.card:hover .profile-image > svg {
   stroke: rgb(110, 252, 205);
 }
 
@@ -111,9 +114,9 @@ img {
   margin-left: 10px;
   translate: 0 100%;
   opacity: 0;
-  transition-delay: 0.3s;
+  /* transition-delay: 0.3s; */
 }
-.card.active .title {
+.card:hover .title {
   opacity: 1;
   translate: 0 0;
 }
