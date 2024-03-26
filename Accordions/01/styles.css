@@ -59,13 +59,13 @@ img {
   position: absolute;
   inset: 0;
   object-fit: cover;
-  object-position: left;
-  filter: brightness(0.8);
+  object-position: center;
+  filter: brightness(0.4);
   z-index: -1;
   transition: var(--transition-timing) ease;
 }
 .card:hover > .background {
-  filter: brightness(1) grayscale(0);
+  filter: brightness(1);
 }
 
 .card > .card-content {
@@ -114,7 +114,6 @@ img {
   margin-left: 10px;
   translate: 0 100%;
   opacity: 0;
-  /* transition-delay: 0.3s; */
 }
 .card:hover .title {
   opacity: 1;
