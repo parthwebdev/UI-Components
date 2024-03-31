@@ -1,0 +1,117 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #061519;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 400px;
+}
+
+.card-content {
+  position: relative;
+  padding: 15rem 5rem;
+  transform-style: preserve-3d;
+  transition: transform 3s;
+}
+.card:hover .card-content {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.card-front,
+.card-back {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  color: white;
+}
+.card-front {
+  background-image: url(https://i.pinimg.com/564x/15/dc/30/15dc30af29194fa3b91e9de015eb646b.jpg);
+  background-color: rgba(255, 163, 42, 0.2);
+  align-items: center;
+}
+.card-front::before {
+  content: "";
+  position: absolute;
+  inset: 1rem;
+  border: 3px solid yellow;
+  transform: translateZ(2rem);
+}
+.title {
+  font-family: "Teko", sans-serif;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+  line-height: 120%;
+  transform: translateZ(4.4rem);
+}
+.sub-title {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  transform: translateZ(3rem);
+}
+
+.card-back {
+  background-image: url(./back.jpg);
+  transform: rotateY(180deg);
+  gap: 0.5rem;
+}
+.back-title {
+  font-family: "Teko", sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: yellow;
+  text-transform: uppercase;
+  align-self: center;
+  transform: translateZ(2rem);
+}
+
+.card-back span {
+  font-weight: 600;
+  color: yellow;
+}
+.btn {
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 2.2rem;
+  color: yellow;
+  border: 2px solid white;
+  border-radius: 100px;
+  text-align: center;
+  align-self: center;
+  margin-top: 1rem;
+  transform: translateZ(2rem);
+  transition: 0.3s ease;
+}
+.btn:hover {
+  background-color: rgb(185, 164, 0);
+  color: white;
+  border: 2px solid rgb(185, 164, 0);
+}
