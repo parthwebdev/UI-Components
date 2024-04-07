@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-color: #212121;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+.cover {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(./cover.jpg);
+  background-size: cover;
+  transform-origin: 0;
+  box-shadow: 1px 1px 12px #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+.book {
+  position: relative;
+  width: 260px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: #effffe;
+  box-shadow: 1px 1px 12px #000;
+  transform: preserve-3d;
+  perspective: 2000px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-align: center;
+}
+
+.book:hover .cover {
+  transition: all 0.5s;
+  transform: rotatey(-80deg);
+}
+
+.cover > p {
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+.cover > h2 > span {
+  color: #1076c9;
+  font-size: 28px;
+  font-weight: bolder;
+}
+
+.content > p {
+  margin-bottom: 10px;
+}
