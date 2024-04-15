@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #171717;
+  color: #f2f2f2;
+  font-family: "Montserrat", sans-serif;
+}
+
+a,
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.nav {
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+.nav-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  translate: 0 0.25rem;
+}
+.nav-brand > img {
+  width: 5.3rem;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.6rem 0.625rem;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.15s;
+}
+.nav-link > svg {
+  font-weight: 600;
+  width: 14px;
+  height: 14px;
+  margin-left: 4px;
+}
+.nav-link:hover {
+  background-color: #212121;
+}
+
+.btn-primary {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.625rem 1rem;
+  gap: 8px;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+}
+.btn-primary > svg,
+.btn-icon > svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 0;
+}
+
+.btn-profile {
+  font-size: 16px;
+  padding: 0.25rem 0.25rem 0.25rem 0.5rem;
+}
+.btn-profile > svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 0;
+}
+.profile-pic {
+  width: 2.25rem;
+  margin-left: 1rem;
+  aspect-ratio: 1;
+}
+.profile-pic > img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 0.375rem;
+}
+
+/* DROPDOWN MENU */
+.dropdown-container {
+  position: relative;
+  overflow: visible;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  top: calc(100% + 8px);
+  background-color: #212121;
+  padding: 1rem;
+  gap: 0.5rem;
+  border-radius: 0.75rem;
+  z-index: 9999;
+  transition: 0.3s;
+}
+.dropdown-container:hover > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-menu.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 240px);
+}
+.dropdown-menu > a {
+  font-weight: 600;
+  padding: 1rem;
+  background-color: #292929;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.dropdown-menu > a:hover {
+  background-color: #353535;
+}
+.dropdown-menu > a > span:nth-of-type(2) {
+  color: #9ca3af;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+  width: 100%;
+  padding: 5px;
+  translate: 0 -20px;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.dropdown-container:hover:has(.profile-dropdown) > .profile-dropdown {
+  translate: 0 0;
+  opacity: 1;
+}
+.profile-dropdown > a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: #d1d5db;
+  transition: 0.15s ease;
+}
+.profile-dropdown > a:hover {
+  background-color: #171717;
+  color: #f0f3f5;
+}
+
+.profile-dropdown > a:nth-child(3) {
+  background-color: #5966f3;
+  color: white;
+}
+.profile-dropdown > a:nth-child(3):hover {
+  background-color: #4150f1;
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+}
+.menu-icon:hover {
+  background-color: #212121;
+}
+
+@media (width <= 900px) {
+  .nav-left > .nav-menu {
+    display: none;
+  }
+  .nav-right > * {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
