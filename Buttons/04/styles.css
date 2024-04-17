@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: hsl(240, 10%, 4%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  all: unset;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 100px;
+  height: 50px;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #183153;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkbox {
+  position: absolute;
+  display: none;
+}
+
+.slider:has(.checkbox:checked) {
+  background-color: #69b0e7;
+}
+
+.icon {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #183153;
+  box-shadow: inset 12px -4px 0px 0px #d8dbe0;
+  transition: 0.4s ease;
+}
+
+.checkbox:checked + .icon {
+  transform: translateX(50px);
+  background-color: #ffd43b;
+  box-shadow: none;
+}
