@@ -9,7 +9,7 @@
 }
 
 :root {
-  --primary: 216 81% 49%;
+  --primary: 225 88% 62%;
   --background: 216 60% 97%;
 }
 
@@ -58,13 +58,13 @@ input[type="radio"] {
   height: 50px;
   position: absolute;
   border-radius: inherit;
-  background-color: hsl(var(--primary) / 0.1);
+  background-color: hsl(var(--primary));
   z-index: 0;
-  transition: 0.25s ease;
+  transition: 0.3s ease;
 }
 
 input[type="radio"]:checked + label {
-  color: hsl(var(--primary));
+  color: #f1f1f1;
 }
 
 input[id="html"]:checked ~ .slider {
